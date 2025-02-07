@@ -1,0 +1,86 @@
+@keyframes handAppear {
+    0% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    20% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes grabPaper {
+    0% {
+        transform: translateY(0) scale(1);
+    }
+    40% {
+        transform: translateY(-10px) scale(0.95);
+    }
+    60% {
+        transform: translateY(-50px) scale(0.9);
+    }
+    100% {
+        transform: translateY(-100px) scale(0.8);
+    }
+}
+
+@keyframes unfoldPaper {
+    0% {
+        transform: scale(1);
+    }
+    40% {
+        transform: scale(1.1) rotateY(180deg);
+    }
+    70% {
+        transform: scale(0.95) rotateY(360deg);
+    }
+    100% {
+        transform: scale(1) rotateY(360deg);
+    }
+}
+
+@keyframes floatPaper {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.hand-appear {
+    animation: handAppear 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.paper-grab {
+    animation: grabPaper 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.paper-unfold {
+    animation: unfoldPaper 1.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+.paper-float {
+    animation: floatPaper 2s ease-in-out infinite;
+}
+
+.result-appear {
+    animation: fadeIn 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px) scale(0.95);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}

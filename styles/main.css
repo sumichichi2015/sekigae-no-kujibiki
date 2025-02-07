@@ -1,0 +1,127 @@
+body {
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+}
+
+.lottery-container {
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    overflow-x: hidden;
+    padding: 1rem 0;
+}
+
+.title-container {
+    padding: 1rem;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 0.5rem;
+    margin: 1rem 0.5rem 2rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.japanese-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2563eb;
+    letter-spacing: 0.1em;
+    margin: 0;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 640px) {
+    .japanese-title {
+        font-size: 1.5rem;
+    }
+
+    .title-container {
+        margin: 0.5rem 0.25rem 1.5rem;
+    }
+}
+
+.paper {
+    width: 80px;
+    height: 100px;
+    background-color: white;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+    transform-origin: center center;
+    transition: transform 0.3s ease;
+    border-radius: 4px;
+}
+
+@media (max-width: 640px) {
+    .paper {
+        width: 60px;
+        height: 75px;
+    }
+}
+
+.hand {
+    width: 60px;
+    height: 100px;
+    position: absolute;
+    bottom: -100px;
+    transform: translateY(0);
+    color: #4b5563;
+    filter: drop-shadow(0 2px 2px rgba(0, 0, 0, 0.1));
+}
+
+@media (max-width: 640px) {
+    .hand {
+        width: 45px;
+        height: 75px;
+        bottom: -75px;
+    }
+}
+
+.result-card {
+    width: 90%;
+    max-width: 400px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.start-button {
+    transition: all 0.3s ease;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    min-width: 120px;
+    box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+}
+
+.start-button:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 8px rgba(37, 99, 235, 0.25);
+}
+
+.start-button:active {
+    transform: translateY(1px) scale(0.98);
+}
+
+.start-button:disabled {
+    background-color: #93c5fd;
+    transform: none;
+    box-shadow: none;
+}
+
+@media (hover: none) {
+    .start-button:hover {
+        transform: none;
+        box-shadow: 0 4px 6px rgba(37, 99, 235, 0.2);
+    }
+}
+
+.papers-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 16px;
+    padding: 1rem;
+    margin: 0 1rem 2rem;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);
+    position: relative;
+    overflow: hidden;
+}
